@@ -9,4 +9,27 @@ return {
   --     require("lsp_signature").setup()
   --   end,
   -- },
+  {
+    "vim-test/vim-test",
+  },
+  {
+    "nvim-neotest/neotest",
+    dependencies = {
+      "nvim-neotest/neotest-vim-test",
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+      "antoinemadec/FixCursorHold.nvim",
+    },
+    config = function()
+      require("neotest").setup {
+        adapters = {
+          require "neotest-plenary",
+          require "neotest-vim-test" {
+            allow_file_types = { "java" },
+          },
+        },
+      }
+    end,
+    ft = { "java" },
+  },
 }

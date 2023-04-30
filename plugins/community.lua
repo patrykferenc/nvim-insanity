@@ -14,4 +14,10 @@ return {
   { import = "astrocommunity.pack.typescript-all-in-one" },
   { import = "astrocommunity.colorscheme.gruvbox" },
   { import = "astrocommunity.completion.copilot-lua-cmp" },
+  {
+    "gruvbox.nvim",
+    opts = {
+      contrast = "soft",
+    },
+  },
 }
