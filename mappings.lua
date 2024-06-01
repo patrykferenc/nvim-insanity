@@ -22,10 +22,10 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
-    ["<leader>Tf"] = {
-      function() require("neotest").run.run(vim.fn.expand "%") end,
-      desc = "Run test file",
-    },
+    -- ["<leader>Tf"] = {
+    --   function() require("neotest").run.run(vim.fn.expand "%") end,
+    --   desc = "Run test file",
+    -- },
   },
   t = {
     -- setting a mapping to false will disable it
